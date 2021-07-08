@@ -13,7 +13,7 @@ Au lancement vous aurez le choix entre 5 classes différentes choisis aléatoire
 ```MANA``` Il s'agit des points de "pouvoirs" du joueur. Ils lui permettent d'effectuer des coups spéciaux.   
 ```DMG``` Point d'attaque. Il s'agit des dégats effectuer par le coup de base du joueur.   
 ```SPECIAL ATTACK``` C'est le coup spécial propre à chaque joueur.   
-## Personnages
+## Personnages   
 ```ASSASSIN``` De son nom Carl il est rusé et fourbe. Il démarre la partie avec 6HP - 6 DMG - 20 MANA.   
 Son coup spécial est le "Shadow hit"(20 MANA). Il choisi une cible et se cache dans un coin attendant le meilleur moment pour frapper, ce qui le rend invincible pendant ce temps. Au début du tour suivant il attaque sa cible et lui inflige 7 dégats. Seulement il n'est plus à couvert donc si sa cible ne meurt pas elle lui inflige également 7 dégats.   
 ```BERZERKER``` De son vrai nom Draven il est bourrin avec une attaque élevée. Il démarre la partie avec 8 HP - 4 DMG - 0 MANA.   
@@ -28,7 +28,6 @@ Son coup fatal est "Heal"(25 MANA). Grâce à sa grande magie, enseigné par Mer
 Son coup fatal est "Healing Lighting"(40 MANA). Chevalier au service du roi il est touché de la lumière divine et lors de son attaque spéciale peut faire 4 DMG à son adversaire tout en gagnant +5 HP.   
 ```WIZARD``` De son vrai nom Gandalf c'est un un puissant mage utilisant des sorts magiques. Il démarre la partie avec 10HP - 2 DMG - 200 MANA.    
 Son coup fatal est "FireBall"(25 MANA). Pour compenser son physique viellissant et son manque de force il est capable d'envoyer des boules de feu meutrière infligeant 7 DMG à son adversaire.   
----
 # Code
 ## Technos
 Full JavaScript Vanilla   
