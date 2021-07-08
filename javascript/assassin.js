@@ -43,7 +43,7 @@ class Assassin extends Character{
     this.hp -= 7
     console.log(`%cL'attaque suprise a échoué ${this.name} subit à son tour 7 points de dégats...`,'color:red')
     if (this.hp <= 0){
-      this.status == 'lose'
+      this.status = 'lose'
       console.log(`%c*** ${this.name} est mort suite à une attaque loupé... ***`,'color:red')
       console.log('\n')
     }
