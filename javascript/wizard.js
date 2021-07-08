@@ -1,7 +1,7 @@
 class Wizard extends Character{
   constructor(name,hp = 10,dmg = 2,mana = 200){
     super(name,hp,dmg,mana,status);
-    this.description ='un puissant sage utilisant des sorts magiques'
+    this.description ='un puissant mage utilisant des sorts magiques'
   }
 
   specialAttackName(){

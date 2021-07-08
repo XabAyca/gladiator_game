@@ -17,7 +17,7 @@ class Berzerker extends Character{
       this.hp -=1
       console.log(`%c${this.name} a utilisé son attaque spécial ${this.specialAttackName()}`,'color:tomato')
       console.log(`%cIl gagne 1 point de dommage supplémentaire`,'color:greenyellow')
-      console.log(`%cEt perd 1 points HP`,'color:crimson')
+      console.log(`%cEt perd 1 point HP`,'color:crimson')
       player.takeDamages(5)
       player.hp < 1 ? this.isKilled(player) : null ;
     }  

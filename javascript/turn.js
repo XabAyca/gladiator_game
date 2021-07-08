@@ -55,14 +55,34 @@ class Turn{
   }
 
   botAttack(bot,ennemies){
-    if (ennemies.length==1){
-      let victim = ennemies[0]
-      bot.dealsDamages(victim, bot.dmg)
+    let ennemiesLowHp = ennemies.filter(el=>{el.hp <= bot.dmg})
+    if (ennemiesLowHp.length < 0){
+      let victim = this.randomVictim(ennemiesLowHp);
+      if (bot.someMana == false){
+        bot.dealsDamages(victim, bot.dmg)
+      }else{
+        if (this.randomNumber() == 1){
+          bot.dealsDamages(victim, bot.dmg)
+        }else{
+          bot.specialAttack(victim)
+        }
+      }
     }else{
       let victim = this.randomVictim(ennemies);
-      bot.dealsDamages(victim, bot.dmg)
+      if (bot.someMana == false){
+        bot.dealsDamages(victim, bot.dmg)
+      }else{
+        if (this.randomNumber() == 1){
+          bot.dealsDamages(victim, bot.dmg)
+        }else{
+          bot.specialAttack(victim)
+        }
+      }
     }
-    
+  }
+
+  randomNumber(){
+    return Math.floor(Math.random() * 2)
   }
 
   randomVictim(ennemies){

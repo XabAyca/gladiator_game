@@ -45,6 +45,7 @@ class Assassin extends Character{
     if (this.hp <= 0){
       this.status == 'lose'
       console.log(`%c*** ${this.name} est mort suite à une attaque loupé... ***`,'color:red')
+      console.log('\n')
     }
   }
 
