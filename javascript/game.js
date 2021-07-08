@@ -2,8 +2,9 @@ class Game{
   constructor(){
     console.clear();
     this.welcome()
-    this.characters = []
-    this.createCharacter()
+    this.players = []
+    this.createPlayers()
+    this.get5Players()
     this.turnLeft = 10
     this.playerSelection()
   }
@@ -14,26 +15,32 @@ class Game{
     
   }
 
-  createCharacter(){
-    this.characters.push(
+  createPlayers(){
+    this.players.push(
       new Fighter("Grace"),
       new Paladin("Ulder"),
       new Monk("Moana"),
       new Berzerker("Draven"),
-      new Assassin("Carl")
+      new Assassin("Carl"),
+      new Wizard('Gandalf'),
+      new Bowman("Robin Hood")
     );
+  }
+
+  get5Players(){
+    this.players = this.players.sort(() => 0.5 - Math.random()).slice(0, 5);
   }
 
   playerSelection(){
     console.log("%cChoisis ton personnage :",'color:yellow')
-    this.characters.map((el,index) =>{
+    this.players.map((el,index) =>{
       console.log(`${index}- ${el.constructor.name} : ${el.name} -- ${el.description}`)
     })
     let answerCorrect = false;
     while (answerCorrect != true){
-      let playerAnswer = prompt(`Choisissez un joueur (de 0 à ${this.characters.length-1})`)
-      if (playerAnswer >= 0 && playerAnswer < this.characters.length){
-        this.characters[playerAnswer].player = true
+      let playerAnswer = prompt(`Choisissez un joueur (de 0 à ${this.players.length-1})`)
+      if (playerAnswer >= 0 && playerAnswer < this.players.length){
+        this.players[playerAnswer].player = true
         answerCorrect = true
       }else
         console.log('Non valide...')
@@ -41,7 +48,7 @@ class Game{
   }
 
   alivePlayers(){
-    return this.characters.filter(el=>el.status == 'playing')
+    return this. players.filter(el=>el.status == 'playing')
   }
 
   watchStats(){
